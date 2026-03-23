@@ -11,5 +11,7 @@ app.get('/about', function (req, res) {
     res.render('pages/about');
 });
 
-app.listen(800);
+const port = process.env.PORT || 3000;
+app.listen(port, () => console.log(`Listening on ${port}`));
+
 console.log('Server is listening on port 800');
