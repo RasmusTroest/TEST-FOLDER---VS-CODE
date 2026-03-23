@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Kontakt formular</title>
+    <style>
+        div.container {
+            display: grid;
+            margin: 15px;
+        }
+
+        html {
+            background-color: lightgrey;
+        }
+
+        input[type="submit"] {
+            background-color: green;
+            color: white;
+            padding: 6px;
+            border: 0px;
+
+        }
+
+        input[type="submit"]:hover {
+            background-color: lightgreen;
+            cursor: pointer;
+        }
+
+        input:valid {
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Kontakt formular</h1>
+    <section>
+        <div class="container">
+            <label>Fornavn:</label>
+            <input type="text" id="fornavn" placeholder="" required maxlength="16">
+        </div>
+        <div class="container">
+            <label>Efternavn:</label>
+            <input type="text" id="efternavn" placeholder="" required maxlength="16">
+        </div>
+        <div class="container">
+            <label>Tlf:</label>
+            <input type="tel" id="tlf" placeholder="" required="8" maxlength="8">
+        </div>
+        <div class="container">
+            <label>Email:</label>
+            <input type="email" id="email" required>
+        </div>
+        <div class="container">
+            <label>Besked:</label>
+            <textarea id="besked" rows="5" maxlength="512"></textarea>
+        </div>
+        <div class="container">
+            <input type="submit" disabled>
+        </div>
+    </section>
+    <ul id="list">
+
+    </ul>
+    <script>
+        for (let index = 1; index <= 25; index++) {
+            const placement = document.getElementById("list");
+            const newParagraph = document.createElement("p");
+            newParagraph.textContent = index;
+            placement.appendChild(newParagraph);
+        }
+    </script>
+
+</body>
+
+</html>

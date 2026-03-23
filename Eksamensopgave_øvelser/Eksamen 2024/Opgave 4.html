@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Kontaktformular</title>
+    <style>
+        input {
+            text-align: left;
+            margin-bottom: 14px;
+        }
+
+        container {
+            display: flex;
+            flex-direction: column;
+            width: 40%;
+            border-color: black;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Arial;
+        }
+
+        header {
+            font-size: 20pt;
+        }
+
+        #submit {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>Kontaktformular</header>
+    <h5>Her kan du skrive dine kontaktoplysninger</h5>
+    <container>
+        <p>Navn</p>
+        <input type="text" id="navn" required>
+        <p>Email</p>
+        <input type="text" id="email">
+        <p>Telefonnummer</p>
+        <input type="number" id="telefon">
+        <p>Besked</p>
+        <input id="besked">
+        <button disabled>Submit</button>
+    </container>
+    <script>
+        function test() {
+            //Print to user
+            let emailInput = document.getElementById("email");
+            let message = document.getElementById("besked");
+            let name = document.getElementById("navn");
+            let tlf = document.getElementById("telefon");
+            alert(`
+            Formular Indsendt!
+
+            Følgende mail blev noteret: ${emailInput.value}
+            Med følgende besked: 
+            ${message.value}
+            `)
+
+            //Reset fields
+            emailInput.value = "";
+            message.value = "";
+            tlf.value = "";
+            name.value = "";
+        }
+
+        function disabled() {
+            const button = document.querySelector("button");
+            const emailInput = document.getElementById("email");
+            const name = document.getElementById("navn");
+            if (emailInput.value.length > 0 && name.value.length > 0) {
+                button.disabled = false;
+            }
+        }
+
+        let submitButton = document.querySelector("button");
+        submitButton.addEventListener("click", test);
+        document.addEventListener("change", disabled)
+
+    </script>
+</body>
+
+</html>
