@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <%- include('../partials/head'); %>
 </head>
@@ -12,6 +13,9 @@
 
   <main>
     <div class="jumbotron">
+      <div class="autocomplete-container">
+        <input type="search" id="dawa-autocomplete-input">
+      </div>
       <h1>This is great</h1>
       <p>Welcome to templating using EJS</p>
     </div>
@@ -21,6 +25,7 @@
     <%- include('../partials/footer'); %>
   </footer>
 
+  <script src="https://cdn.dataforsyningen.dk/dawa/assets/dawa-autocomplete2/1.0.2/dawa-autocomplete2.min.js"></script>
 </body>
+
 </html>
-``
