@@ -25,12 +25,14 @@
     <%- include('../partials/footer'); %>
   </footer>
 
-  <script src="https://cdn.dataforsyningen.dk/dawa/assets/dawa-autocomplete2/1.0.2/dawa-autocomplete2.min.js">
+  <script src="https://cdn.dataforsyningen.dk/dawa/assets/dawa-autocomplete2/1.0.2/dawa-autocomplete2.min.js"></script>
+  <script>
     dawaAutocomplete.dawaAutocomplete(document.getElementById('dawa-autocomplete-input'), {
       select: function (selected) {
         console.log('Valgt adresse: ' + selected.tekst);
       }
-    });</script>
+    });
+  </script>
 </body>
 
 </html>
