@@ -16,23 +16,13 @@
       <h1>This is great</h1>
       <p>Welcome to templating using EJS</p>
     </div>
-    <div class="autocomplete-container">
-      <input type="search" id="dawa-autocomplete-input">
-    </div>
   </main>
 
   <footer>
     <%- include('../partials/footer'); %>
   </footer>
 
-  <script src="https://cdn.dataforsyningen.dk/dawa/assets/dawa-autocomplete2/1.0.2/dawa-autocomplete2.min.js"></script>
-  <script>
-    dawaAutocomplete.dawaAutocomplete(document.getElementById('dawa-autocomplete-input'), {
-      select: function (selected) {
-        console.log('Valgt adresse: ' + selected.tekst);
-      }
-    });
-  </script>
+
 </body>
 
 </html>
